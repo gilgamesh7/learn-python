@@ -1,0 +1,1 @@
+print ("In God We Trust")
