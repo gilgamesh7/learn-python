@@ -8,12 +8,22 @@ from os import path
 import shutil
 
 def myShellUtils(myFileName):
-    
-    
-    return(1)
+    if path.exists(myFileName):
+        retVal=myFileName+" Exists"
+    else :
+        retVal=myFileName+" does not exist"
+        
+    if path.exists(myFileName):
+        src=myFileName
+        dst=myFileName+".bak"
+        retVal=os.listdir()
+            
+    return(retVal)
 
 if __name__ == '__main__':
-    myShellUtils("C:\doesnotexist.txt")
-    myShellUtils("C:\igwt.txt")
+    print(myShellUtils("C:\doesnotexist.txt"))
+    myPath=os.getcwd()
+    myFile=myPath+"fileOS.py"
+    myShellUtils(myFile)
 
 exit(1)
